@@ -1,0 +1,192 @@
+.task-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+.task-image--wrapper {
+  height: 500px;
+  width: 500px;
+  position: relative;
+}
+.task-image--field {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+  z-index: 10;
+}
+.task-image--dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: blueviolet;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  z-index: 3;
+  margin-left: -4px;
+  margin-top: -4px;
+}
+.task-image--dot._active {
+  background: seagreen;
+}
+.task-image--dot._inactive {
+  background: brown;
+}
+.task-image__quadrant {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  overflow: hidden;
+}
+.task-image__quadrant--first {
+  top: 0;
+  left: 50%;
+}
+.task-image__quadrant--second {
+  top: 50%;
+  left: 50%;
+}
+.task-image__quadrant--second .task-image__quadrant__figure {
+  position: absolute;
+  background: cornflowerblue;
+  top: -30%;
+  left: -54.5%;
+  transform: rotate(26.56deg);
+  height: 100%;
+  width: 80%;
+  right: 0;
+}
+.task-image__quadrant--third {
+  top: 50%;
+  left: 0;
+}
+.task-image__quadrant--third .task-image__quadrant__figure {
+  position: absolute;
+  background: cornflowerblue;
+  right: -40%;
+  top: -40%;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+}
+.task-image__quadrant--fourth {
+  top: 0;
+  left: 0;
+}
+.task-image__quadrant--fourth .task-image__quadrant__figure {
+  position: absolute;
+  background: cornflowerblue;
+  width: 80%;
+  height: 40%;
+  bottom: 0;
+  right: 0;
+}
+.task-image__line {
+  background: #000;
+  position: absolute;
+  z-index: 2;
+}
+.task-image__line:before, .task-image__line:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  background: #000;
+}
+.task-image__line__mark {
+  position: absolute;
+  background: #222;
+  font-size: 12px;
+}
+.task-image__line__mark:before {
+  position: absolute;
+  content: "R";
+  display: block;
+  width: 40px;
+  text-align: center;
+}
+.task-image__line__mark--htop:before {
+  content: "R / 2";
+}
+.task-image__line__mark--hbottom:before {
+  content: "R / 2";
+}
+.task-image__line--x {
+  width: 100%;
+  height: 2px;
+  left: 0;
+  top: calc(50% - 1px);
+}
+.task-image__line--x:before {
+  top: -4px;
+  right: 0;
+  transform: rotate(30deg);
+}
+.task-image__line--x:after {
+  top: 4px;
+  right: 0;
+  transform: rotate(-30deg);
+}
+.task-image__line--x .task-image__line__mark {
+  top: -5px;
+  height: 11px;
+  width: 1px;
+}
+.task-image__line--x .task-image__line__mark:before {
+  top: -16px;
+  left: -20px;
+}
+.task-image__line--x .task-image__line__mark--top {
+  left: 10%;
+}
+.task-image__line--x .task-image__line__mark--htop {
+  left: 30%;
+}
+.task-image__line--x .task-image__line__mark--hbottom {
+  right: 30%;
+}
+.task-image__line--x .task-image__line__mark--bottom {
+  right: 10%;
+}
+.task-image__line--y {
+  width: 2px;
+  height: 100%;
+  left: calc(50% - 1px);
+  top: 0;
+}
+.task-image__line--y:before {
+  left: -11px;
+  top: 7px;
+  transform: rotate(120deg);
+}
+.task-image__line--y:after {
+  left: -3px;
+  top: 7px;
+  transform: rotate(-120deg);
+}
+.task-image__line--y .task-image__line__mark {
+  left: -5px;
+  width: 11px;
+  height: 1px;
+}
+.task-image__line--y .task-image__line__mark:before {
+  top: -5px;
+  left: 8px;
+}
+.task-image__line--y .task-image__line__mark--top {
+  top: 10%;
+}
+.task-image__line--y .task-image__line__mark--htop {
+  top: 30%;
+}
+.task-image__line--y .task-image__line__mark--hbottom {
+  bottom: 30%;
+}
+.task-image__line--y .task-image__line__mark--bottom {
+  bottom: 10%;
+}
+
+/*# sourceMappingURL=interactive.css.map */

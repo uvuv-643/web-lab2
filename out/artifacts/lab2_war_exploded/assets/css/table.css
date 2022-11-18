@@ -1,0 +1,160 @@
+body {
+    font-family: "Roboto", monospace;
+}
+table {
+    width: 100%;
+}
+* {
+    box-sizing: border-box;
+}
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+/*HTML-страница должна иметь "шапку", содержащую ФИО студента, номер группы и новер варианта. При оформлении шапки необходимо явным образом задать шрифт (monospace), его цвет и размер в каскадной таблице стилей.*/
+thead {
+    font-size: 14px;
+    color: #000;
+    background: #e5c584;
+}
+#main-table tbody td {
+    padding-right: 30px;
+    padding-left: 30px;
+}
+#main-table thead th {
+    width: 25%;
+}
+#main-table thead {
+    padding: 10px 15px 0;
+}
+#main-table thead > span {
+    font-weight: bold;
+}
+
+#main-table thead th div {
+    position: relative;
+    margin: 5% 7%;
+    cursor: pointer;
+}
+#main-table thead th div:before {
+    position: absolute;
+    left: 0;
+    content: '';
+    display: block;
+    bottom: -4px;
+    width: 100%;
+    background: #000;
+    height: 2px;
+    transition: 0.3s;
+    transform: scaleX(0);
+}
+#main-table thead th div:hover:before {
+    transform: scaleX(1);
+}
+
+/*Отступы элементов ввода должны задаваться в процентах.*/
+.task-input {
+    margin-right: 15px;
+    margin-top: 15px;
+}
+.task-input--buttons > button {
+    margin-bottom: 5px;
+}
+.task-input--buttons > button._active {
+    background: cadetblue;
+}
+.task-input label {
+    display: block;
+}
+.task-image {
+    margin-top: 15px;
+}
+
+.task-input input {
+    width: 100%;
+    padding: 5px 15px;
+}
+.task-input label {
+    margin-bottom: 7px;
+}
+.task-input select {
+    width: 100%;
+    padding: 5px 15px;
+}
+td[data-trigger="input-submit"] > button {
+    outline: none;
+    border: none;
+    background: #e5c584;
+    color: #fff;
+    padding: 5px 15px;
+    width: 100%;
+}
+#result-table {
+    padding: 30px;
+}
+#result-table td {
+    padding: 10px;
+}
+#result-table th {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+._buttons-container {
+    display: flex;
+    align-items: center;
+}
+._button {
+    cursor: pointer;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 14px;
+    line-height: 50px;
+    padding: 0 20px;
+    transition: all 0.3s ease;
+    outline: none;
+    background: #e5c584;
+    color: #121212;
+    margin-right: 15px;
+    text-decoration: none;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+.task-input-top {
+    vertical-align: top;
+}
+.task-input-bottom {
+    vertical-align: bottom;
+}
+._button:hover:before {
+    animation: hoverFlare 1.5s infinite;
+}
+._button:before {
+    content: '';
+    transition: 3s ease-in-out;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.5));
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    top: 0;
+    transform: skewX(-45deg);
+    left: -900px;
+}
+._button img {
+    height: 18px;
+    margin-right: 12px;
+}
+
+@keyframes hoverFlare {
+    0% {
+        left: -90px;
+    }
+    100% {
+        left: 150%;
+    }
+}
